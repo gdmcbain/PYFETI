@@ -63,7 +63,7 @@ Have fun!
 
 # Theory behind PyFETI
 ## Solving with Dual Assembly
-The PyFETI library is intend to provide easy function in order to solve, the dual assembly problem, namely:
+The PyFETI library is intended to provide easy function in order to solve, the dual assembly problem, namely:
 
 
 $$
@@ -96,27 +96,27 @@ $$
 
 Where $G$ is defined as $-R^TB^T$.
 
-The Dual Assembly system of equation describe above can be broken in two equations.
+The Dual Assembly system of equations described above can be broken in two equations.
 
 \begin{equation}
 Ku + B^{T}\lambda  = f \\
 Bu = 0 
 \end{equation}
 
-Then, the solution u can be calculate by:
+Then, the solution u can be calculated by:
 
 \begin{equation}
 u =  K^*(B^{T}\lambda  + f) +  R\alpha \\
 \end{equation}
 
-Where $K^*$ is the generelize pseudo inverse and $R$ is $Null(K) = \{r \in R: Kr=0\}$, named the kernel of the K matrix.
-In order to the solve $u$ the summation of all forces in the subdomain, interface, internal and extenal forces must be in the image of K. This implies the $(B^{T}\lambda  + f)$ must be orthonal to the null space of K.
+Where $K^*$ is the generalized pseudo inverse and $R$ is $Null(K) = \{r \in R: Kr=0\}$, named the kernel of the K matrix.
+In order to the solve $u$ the summation of all forces in the subdomain, interface, internal and extenal forces must be in the image of K. This implies the $(B^{T}\lambda  + f)$ must be orthogonal to the null space of K.
 
 \begin{equation}
 R(B^{T}\lambda  + f) = 0 \\
 \end{equation}
 
-Phisically, the equation above enforces the self-equilibrium for each sub-domain. Using the compatibility equation and the self-equilibrium equation, we can write the dual interface equilibrium equation as:
+Physically, the equation above enforces the self-equilibrium for each sub-domain. Using the compatibility equation and the self-equilibrium equation, we can write the dual interface equilibrium equation as:
 
 
 $$
